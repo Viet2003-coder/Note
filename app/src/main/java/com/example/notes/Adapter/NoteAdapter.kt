@@ -1,4 +1,4 @@
-package com.example.notes
+package com.example.notes.Adapter
 
 import android.annotation.SuppressLint
 import android.view.LayoutInflater
@@ -6,11 +6,13 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.example.notes.Model.Note
+import com.example.notes.R
 import java.text.SimpleDateFormat
 import java.util.Date
 import java.util.Locale
 
-class NoteAdapter(var list : ArrayList<Note>,val listlener : OnItemclickistener
+class NoteAdapter(var list : ArrayList<Note>, val listlener : OnItemclickistener
 ) : RecyclerView.Adapter<NoteAdapter.NoteViewHolder>() {
     private var fullList = ArrayList<Note>()
     init {

@@ -1,10 +1,11 @@
-package com.example.notes
+package com.example.notes.Model
 
-data class Note(
+class SpecialNote(
     var id: String ?=null,
+    var id_note: String ?=null,
     var username: String ?= null,
     var title: String ?=null,
     var content: String ?= null,
-    var timestamp: Long = System.currentTimeMillis()
+    var time: String ?= null
 ) {
 }

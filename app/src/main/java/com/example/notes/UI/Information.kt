@@ -1,4 +1,4 @@
-package com.example.notes
+package com.example.notes.UI
 
 import android.content.Intent
 import android.os.Bundle
@@ -9,7 +9,8 @@ import android.view.ViewGroup
 import android.widget.LinearLayout
 import android.widget.TextView
 import android.widget.Toast
-import com.google.firebase.Firebase
+import com.example.notes.Model.Note
+import com.example.notes.R
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.DatabaseReference

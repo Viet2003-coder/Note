@@ -1,12 +1,10 @@
-package com.example.notes
+package com.example.notes.UI
 
 import android.os.Bundle
 import android.widget.EditText
 import android.widget.Toast
-import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
+import com.example.notes.R
 import com.example.notes.databinding.ActivityUpdateNoteBinding
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase

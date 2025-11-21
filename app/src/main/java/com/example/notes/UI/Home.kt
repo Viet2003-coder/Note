@@ -1,8 +1,7 @@
-package com.example.notes
+package com.example.notes.UI
 
 import android.annotation.SuppressLint
 import android.content.Intent
-import android.content.SharedPreferences
 import android.content.res.Configuration.ORIENTATION_LANDSCAPE
 import android.os.Bundle
 import android.text.Editable
@@ -12,9 +11,11 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.EditText
-import androidx.appcompat.widget.SearchView
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.notes.Adapter.NoteAdapter
+import com.example.notes.Model.Note
+import com.example.notes.R
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
@@ -53,10 +54,10 @@ class Home : Fragment() {
         val view=inflater.inflate(R.layout.fragment_home, container, false)
         var btnAdd= view.findViewById<FloatingActionButton>(R.id.btnAdd)
         var rcv=view.findViewById<RecyclerView>(R.id.rvNotes)
-        adapter= NoteAdapter(list,object : NoteAdapter.OnItemclickistener{
+        adapter= NoteAdapter(list, object : NoteAdapter.OnItemclickistener {
             override fun onItemClick(note: Note) {
                 val intent = Intent(requireContext(), Detail::class.java)
-                intent.putExtra("noteid",note.id)
+                intent.putExtra("noteid", note.id)
                 startActivity(intent)
             }
 

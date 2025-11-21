@@ -1,9 +1,12 @@
-package com.example.notes
+package com.example.notes.Adapter
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentActivity
 import androidx.viewpager2.adapter.FragmentStateAdapter
+import com.example.notes.UI.Home
+import com.example.notes.UI.Information
+import com.example.notes.UI.SpecialNotes
 
 class ViewPager2Adapter(activity: FragmentActivity, private val username: String) : FragmentStateAdapter(activity) {
     override fun createFragment(position: Int): Fragment {

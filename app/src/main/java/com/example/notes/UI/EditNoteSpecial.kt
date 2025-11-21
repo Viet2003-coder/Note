@@ -1,15 +1,10 @@
-package com.example.notes
+package com.example.notes.UI
 
 import android.os.Bundle
 import android.widget.Toast
-import androidx.activity.enableEdgeToEdge
-import androidx.activity.result.IntentSenderRequest
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.os.JavaHeapDumpRequestBuilder
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
-import androidx.fragment.app.strictmode.FragmentStrictMode
+import com.example.notes.Model.SpecialNote
 import com.example.notes.databinding.ActivityEditNoteSpecialBinding
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError

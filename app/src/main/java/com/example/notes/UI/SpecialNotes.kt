@@ -1,6 +1,5 @@
-package com.example.notes
+package com.example.notes.UI
 
-import android.annotation.SuppressLint
 import android.content.Intent
 import android.content.res.Configuration.ORIENTATION_LANDSCAPE
 import android.os.Bundle
@@ -14,6 +13,9 @@ import android.widget.EditText
 import android.widget.Toast
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.notes.Adapter.SpecialNoteAdapter
+import com.example.notes.Model.SpecialNote
+import com.example.notes.R
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.DatabaseReference
@@ -48,10 +50,10 @@ class SpecialNotes : Fragment() {
         val view = inflater.inflate(R.layout.fragment_special_notes, container, false)
 
         val rcv = view.findViewById<RecyclerView>(R.id.rvNotesSpecial)
-        adapter = SpecialNoteAdapter(list,object : SpecialNoteAdapter.OnItemclickistener{
+        adapter = SpecialNoteAdapter(list, object : SpecialNoteAdapter.OnItemclickistener {
             override fun onItemClick(note: SpecialNote) {
-                val intent= Intent(requireContext(), DetailSpecial::class.java)
-                intent.putExtra("notespecial_id",note.id)
+                val intent = Intent(requireContext(), DetailSpecial::class.java)
+                intent.putExtra("notespecial_id", note.id)
                 startActivity(intent)
             }
         })   // ✔️ KHỞI TẠO TRƯỚC

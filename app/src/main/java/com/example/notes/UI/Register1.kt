@@ -1,17 +1,13 @@
-package com.example.notes
+package com.example.notes.UI
 
 import android.annotation.SuppressLint
 import android.graphics.Color
 import android.os.Bundle
 import android.util.Log
 import android.widget.Toast
-import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.content.ContextCompat
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
 import androidx.core.widget.addTextChangedListener
-import com.example.note.User
+import com.example.notes.Model.User
 import com.example.notes.databinding.ActivityRegister1Binding
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError

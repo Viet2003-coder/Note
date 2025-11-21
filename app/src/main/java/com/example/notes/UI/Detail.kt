@@ -1,14 +1,12 @@
-package com.example.notes
+package com.example.notes.UI
 
-import android.app.Dialog
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Toast
-import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
+import com.example.notes.Model.Note
+import com.example.notes.Model.SpecialNote
 import com.example.notes.databinding.ActivityDetailBinding
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
@@ -16,7 +14,6 @@ import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
 import java.text.SimpleDateFormat
-import java.util.Date
 import java.util.Locale
 
 class Detail : AppCompatActivity() {
@@ -68,7 +65,14 @@ class Detail : AppCompatActivity() {
                 var contentSpecial=binding.tvDetailContent.text.toString()
                 var timeSpecial=binding.tvTime.text.toString()
                 var specialId=dbr.push().key!!
-                var specialNote = SpecialNote(specialId, note_id,username,titleSpecial,contentSpecial,timeSpecial)
+                var specialNote = SpecialNote(
+                    specialId,
+                    note_id,
+                    username,
+                    titleSpecial,
+                    contentSpecial,
+                    timeSpecial
+                )
                 dbr= FirebaseDatabase.getInstance().getReference("SpecialNotes")
                 dbr.orderByChild("id_note").equalTo(note_id).addListenerForSingleValueEvent(object : ValueEventListener{
                     override fun onDataChange(snapshot: DataSnapshot) {
