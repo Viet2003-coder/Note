@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <!-- Thanh top gồm Back + Edit + Delete -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <!-- Nút back -->
+        <ImageButton
+            android:id="@+id/btnBackSpecialDetail"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:padding="8dp"
+            android:src="@drawable/back_24" />
+
+        <!-- Title màn hình -->
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Detail"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:gravity="center" />
+
+        <!-- Nút edit -->
+        <ImageButton
+            android:id="@+id/btnEditSpecial"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:padding="8dp"
+            android:src="@drawable/outline_edit_24"
+            android:background="?attr/selectableItemBackgroundBorderless" />
+
+        <!-- Nút delete -->
+        <ImageButton
+            android:id="@+id/btnDeleteSpecial"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:padding="8dp"
+            android:src="@drawable/sharp_auto_delete_24"
+            android:background="?attr/selectableItemBackgroundBorderless" />
+
+    </LinearLayout>
+
+    <!-- Tiêu đề note -->
+    <TextView
+        android:id="@+id/tvTimeSpecial"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Time here"
+        android:textSize="18sp"
+        android:textStyle="normal"
+        android:paddingTop="16dp"
+        android:paddingBottom="8dp" />
+    <TextView
+        android:id="@+id/tvDetailTitleSpecial"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Title here"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:paddingTop="16dp"
+        android:paddingBottom="8dp" />
+
+    <!-- Nội dung note -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <TextView
+            android:id="@+id/tvDetailContentSpecial"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Content here..."
+            android:textSize="18sp"
+            android:lineSpacingExtra="4dp" />
+    </ScrollView>
+
+</LinearLayout>

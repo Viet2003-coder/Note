@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    android:background="#F2EBAE"
+    card_view:cardCornerRadius="14dp"
+    card_view:cardElevation="5dp"
+    card_view:cardUseCompatPadding="true">
+
+
+    <LinearLayout
+        android:padding="14dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/bg_note_item">
+
+        <!-- Timestamp -->
+        <TextView
+            android:id="@+id/tvTimeSpecial"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="12/11/2025 - 14:30"
+            android:textSize="12sp"
+            android:textColor="#6E6E6E"
+            android:paddingBottom="4dp" />
+
+        <!-- Title -->
+        <TextView
+            android:id="@+id/tvTitleSpecial"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Tiêu đề ghi chú"
+            android:textStyle="bold"
+            android:textSize="17sp"
+            android:textColor="#1A1A1A"
+            android:paddingBottom="6dp" />
+
+        <!-- Content -->
+        <TextView
+            android:id="@+id/tvContentSpecial"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Nội dung ghi chú..."
+            android:textSize="14sp"
+            android:textColor="#333333"
+            android:ellipsize="end"
+            android:maxLines="3" />
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>
